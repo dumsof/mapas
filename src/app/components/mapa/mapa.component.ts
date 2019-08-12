@@ -2,6 +2,9 @@
 esto se debe que la aplicación contiene dos modulos el cual uno es para los componentes de angular material
 comando cli: ng g c components/mapa --module=app.module --spec=false */
 import { Component, OnInit } from '@angular/core';
+
+/* material designa para mostrar snack bar mensaje emergente lado derecho inferior. */
+import { MatSnackBar } from '@angular/material';
 import { Marcador } from '../../classes/marcador.class';
 
 @Component({
@@ -16,7 +19,7 @@ export class MapaComponent implements OnInit {
   lat = 51.678418;
   lng = 7.809007;
 
-  constructor() {
+  constructor(public snackBar: MatSnackBar) {
     /* const nuevoMarcador = new Marcador(51.678418, 7.809007);
     this.marcadores.push(nuevoMarcador); */
 
@@ -36,11 +39,13 @@ export class MapaComponent implements OnInit {
     const nuevoMarcador = new Marcador(coords.lat, coords.lng);
     this.marcadores.push(nuevoMarcador);
     this.guardarStorage();
+    this.snackBar.open('Marcador agregado con exito', 'Cerrar', { duration: 3000 });
   }
 
   borrarMarcador(index: number) {
     this.marcadores.splice(index, 1);
     this.guardarStorage();
+    this.snackBar.open('Marcador borrado con exito', 'Cerrar', { duration: 3000 });
   }
 
   guardarStorage() {
