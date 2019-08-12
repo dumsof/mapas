@@ -9,11 +9,13 @@ import { MapaComponent } from './components/mapa/mapa.component';
 
 /* Importar el componente para utilizar el mapa de google */
 import { AgmCoreModule } from '@agm/core';
+import { MapaEditarComponent } from './components/mapa/mapa-editar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MapaComponent
+    MapaComponent,
+    MapaEditarComponent
   ],
   imports: [
     BrowserModule,

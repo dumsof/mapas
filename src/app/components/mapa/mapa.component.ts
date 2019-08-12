@@ -52,5 +52,4 @@ export class MapaComponent implements OnInit {
     /* se guarda en el local storage el valor de los marcadores, se convierte en un string de json */
     localStorage.setItem('marcadores', JSON.stringify(this.marcadores));
   }
-
 }
