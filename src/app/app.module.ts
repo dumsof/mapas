@@ -3,14 +3,19 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+/* Componentes angular material */
+import { MaterialModule } from './material.module';
+import { MapaComponent } from './components/mapa/mapa.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MapaComponent
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
