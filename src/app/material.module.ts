@@ -10,6 +10,7 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import {MatCardModule} from '@angular/material/card';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatDialogModule} from '@angular/material/dialog';
+import {MatInputModule} from '@angular/material/input';
 
 /* se utiliza exports: con el fin de que donde se importe el modulo MaterialModule, el sistema exporte los modulos que estan
 definido en esta parte */
@@ -22,7 +23,8 @@ definido en esta parte */
     MatProgressBarModule,
     MatCardModule,
     MatSnackBarModule,
-    MatDialogModule
+    MatDialogModule,
+    MatInputModule
   ],
   exports: [
     MatToolbarModule,
@@ -30,7 +32,8 @@ definido en esta parte */
     MatProgressBarModule,
     MatCardModule,
     MatSnackBarModule,
-    MatDialogModule
+    MatDialogModule,
+    MatInputModule
   ]
 })
 export class MaterialModule { }
